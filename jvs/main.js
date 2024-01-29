@@ -1,67 +1,86 @@
 let nombre = prompt("ingrese su nombre").toLowerCase();
 let apellido = prompt("ingrese su apellido").toLowerCase();
-let usuario = nombre + apellido + "98";
+let materia = prompt("ingrese la materia que esta cursando (matematicas, literatura, biologia, economia, ingles)").toLowerCase();
+
+const materias = ["matematicas", "literatura", "biologia", "economia", "ingles"];
+
+if (materias.includes(materia)){
+    alert("materia disponible");
+}else{
+    alert("materia no disponible")
+};
+
+let nota1 = Number(prompt("ingrese su nota del primer cuatrimestre"));
+let nota2 = Number(prompt("ingrese su nota del segundo cuatrimestre"));
+
+const generarOperacion = (operacion) =>{
+    if (operacion ==="sumar"){
+        return (x, y) => x + y ;
+    }
+};
+const suma = generarOperacion("sumar");
+alert(`su promedio es" ${suma(nota1, nota2) / 2}`);
 
 
-alert("su usuario es " + usuario);
-alert("hola " + nombre + " " + apellido + ", los productos disponibles hoy son: relojes y cadenas");
+let total = (nota1 + nota2) / 2;
 
-
-let ingreso = prompt("ingrese su usuario");
-while(ingreso != usuario){
-    alert("usuario incorrecto");
-
-    ingreso = prompt("ingrese su usuario").toLowerCase();
+while(total < 7){
+    alert("ustes no aprobo el año, tiene que recursar");
+    total = prompt("ingrese su promedio");
 }
-alert("ya puedes comprar sr/a " + nombre + " " + apellido);
+alert("usted aprobo el año y podra acceder a un premio mas adelante");
 
-
-
-let metodoPago = prompt("ingrese el metodo de pago con su tarjeta (debito o credito)").toLowerCase();
-
-if (metodoPago === "debito"){
-    alert("usted seleciono tarjeta de DEBITO");
-}
-else if(metodoPago === "credito"){
-    alert("usted a seleccionado tarjeta de CREDITO");
-}
-else{
-    alert("metodo de pago invalido vuelva a registrarse");
-}
-
-
-let moneda = prompt("ingrese la moneda con la que abonará (ars, usd, clp)").toLowerCase();
-
-switch (moneda){
-    case "ars":
-        alert("usted abonara con peso argentino");
-        break
-
-    case "usd":
-        alert("usted abonara en dolares");
-        break
-
-    case "clp":
-        alert("usted abonara en moneda de chile");
-        break
-
-    default:
-        alert("moneda no reconocida");
-        break
-}
-
-
-function valorFinal ( ){
-    let productoElegido = prompt("ingrese el producto recuerde los disponibles (relojes o cadenas)").toLowerCase();
-    let cantidadProducto = prompt("ingrese la cantidad");
-    let precioProducto = prompt("ingrese el precio del producto");
-    let valorTotal = cantidadProducto * precioProducto;
-    alert("el precio total es (el valor total se calculara en pesos argentinos): $" + valorTotal);
+const alumnosMejorPromedios = [
+    {nombre: "julieta", apellido: "correa", asistencia: "100%", nota1: 10, nota2: 10, promedio: 10},
+    {nombre: "facundo", apellido: "vergara", asistencia: "98%", nota1: 10, nota2: 9.90, promedio: 9.90},
+    {nombre: "rocio", apellido: "machicoti", asistencia: "99%", nota1: 10, nota2: 9.85, promedio: 9.85},
+    {nombre: "elias", apellido: "villegaz", asistencia: "90%", nota1: 10, nota2: 9.84, promedio: 9.84},
+    {nombre: "leandro", apellido: "gonzales", asistencia: "94%", nota1: 10, nota2: 9.50, promedio: 9.50},
+    {nombre: "nicolas", apellido: "silva", asistencia: "100%", nota1: 10, nota2: 9.45, promedio: 9.45},
     
+]
+alert("te presentamos a los alumnos de mejor promedio, ingrese el nombre si quieres ver sus desempeños(julieta, facundo, rocio, elias, leandro, nicolas)");
+
+let nombreAlumnoHonor = prompt("ingrese el nombre del alumno de mejores promedios");
+let alumnoMejorPromedio = alumnosMejorPromedios.find((item) => item.nombre === nombreAlumnoHonor);
+
+if (alumnoMejorPromedio){
+    alert(`
+    nombre: ${alumnoMejorPromedio.nombre}
+    apellido: ${alumnoMejorPromedio.apellido}
+    asistencia: ${alumnoMejorPromedio.asistencia}
+    nota 1: ${alumnoMejorPromedio.nota1}
+    nota 2: ${alumnoMejorPromedio.nota2}
+    promedio: ${alumnoMejorPromedio.promedio}`)
+}else{
+    alert("el alumno ingresado no se encuentra entre los mejores promedios");
+};
+
+alert("como recompenza por haber aprobado el año usted podra ganar un premio al azar");
+
+const premio = ["lapiceras", "cuadernillos", "marcadores", "mochilas", "cartucheras"];
+const cantidad = [2, 3, 4, 5, 6, 7]
+const obtenerPremio = () =>{
+    let index = Math.floor(Math.random()* premio.length);
+    return premio[index]
+
 }
-valorFinal()
-    
-    
+
+alert(`el premio que te ganaste es: ${obtenerPremio()}`);
+alert("ahora se te va a indicar la cantidad mucha suerte");
+
+
+const obtenerCantidad = () =>{
+    let index = Math.floor(Math.random() * cantidad.length);
+    return cantidad[index]
+};
+
+alert(`la cantidad de tu premio es: ${obtenerCantidad()}`);
+
+
+
+
+
 
 
     
