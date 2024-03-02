@@ -58,12 +58,12 @@ function mostrarToast() {
         destination: "https://github.com/apvarun/toastify-js",
         newWindow: true,
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "top", 
+        position: "right",
+        stopOnFocus: true,
         style: {
             background: "linear-gradient(to right, #000000, #6f6402)",
         },
-        onClick: function(){} // Callback after click
+        onClick: function(){} 
     }).showToast();
 }
