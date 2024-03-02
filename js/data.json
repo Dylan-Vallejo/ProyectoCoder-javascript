@@ -1,0 +1,14 @@
+[
+    {"nombre": "Remera 01", "precio": 5000, "imagen": "./img/imagen.png", "imagen2": "../img/imagen.png"},
+    {"nombre": "Remera 02", "precio": 1000, "imagen": "./img/imagen2.png", "imagen2": "../img/imagen2.png"},
+    {"nombre": "Remera 03", "precio": 5000, "imagen": "./img/imagen3.png", "imagen2": "../img/imagen3.png"},
+    {"nombre": "Remera 04 sin-stock", "precio": 5000, "imagen": "./img/imagen4.png", "imagen2": "../img/imagen4.png"},
+    {"nombre": "Campera 05", "precio": 15000, "imagen": "./img/imagen5.png", "imagen2": "../img/imagen5.png"},
+    {"nombre": "Campera 06 sin-stock", "precio": 15000, "imagen": "./img/imagen6.png", "imagen2": "../img/imagen6.png"},
+    {"nombre": "Campera 07", "precio": 15000, "imagen": "./img/imagen7.png", "imagen2": "../img/imagen7.png"},
+    {"nombre": "Campera 08", "precio": 15000, "imagen": "./img/imagen8.png", "imagen2": "../img/imagen8.png"},
+    {"nombre": "Pantalon 09", "precio": 6000, "imagen": "./img/imagen9.png", "imagen2": "../img/imagen9.png"},
+    {"nombre": "Pantalon 10 sin-stock", "precio": 6000, "imagen": "./img/imagen10.png", "imagen2": "../img/imagen10.png"},
+    {"nombre": "Pantalon 11", "precio": 6000, "imagen": "./img/imagen11.png", "imagen2": "../img/imagen11.png"} ,
+    {"nombre": "Pantalon 12", "precio": 6000, "imagen": "./img/imagen12.png", "imagen2": "../img/imagen12.png"}
+]

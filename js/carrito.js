@@ -25,3 +25,4 @@ productosCarrito.forEach(item => {
     `;
     contenedorCarrito.append(div);
 });
+
